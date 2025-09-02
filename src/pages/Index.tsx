@@ -77,14 +77,14 @@ const Index = () => {
         </Card>
 
         {/* Call to Action */}
-        <div className="text-center animate-fade-in-up px-4 sm:px-6">
+        <div className="text-center animate-fade-in-up px-3 sm:px-6">
           <Button
             onClick={handleWhatsAppClick}
-            className="whatsapp-button text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-5 lg:py-6 rounded-full hover:scale-105 transition-all duration-300 shadow-lg w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-none lg:w-auto"
+            className="whatsapp-button text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl px-3 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-5 lg:py-6 rounded-full hover:scale-105 transition-all duration-300 shadow-lg w-full max-w-[calc(100vw-24px)] sm:max-w-md md:max-w-lg lg:max-w-none lg:w-auto mx-auto"
             size="lg"
           >
             <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 flex-shrink-0" />
-            <span className="text-center leading-tight">Garantir meu ECG Gratuito via WhatsApp</span>
+            <span className="text-center leading-tight text-xs sm:text-sm md:text-base lg:text-lg">Garantir meu ECG Gratuito via WhatsApp</span>
           </Button>
           
           <p className="mt-4 sm:mt-6 text-muted-foreground text-xs sm:text-sm px-2">
