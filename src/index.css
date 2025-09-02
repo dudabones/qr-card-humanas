@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 0 75% 55%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 75% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 75% 55%;
+
+    --heart-primary: 0 75% 55%;
+    --heart-secondary: 0 65% 50%;
+    --whatsapp: 142 76% 36%;
+    --whatsapp-hover: 142 76% 30%;
+    
+    --gradient-heart: linear-gradient(135deg, hsl(var(--heart-primary)), hsl(var(--heart-secondary)));
+    --gradient-bg: linear-gradient(180deg, hsl(0 0% 98%), hsl(0 5% 95%));
+    
+    --shadow-heart: 0 10px 30px -10px hsl(var(--heart-primary) / 0.3);
+    --shadow-button: 0 8px 25px -8px hsl(var(--whatsapp) / 0.4);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .heartbeat-bg {
+    background: var(--gradient-bg);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  
+  .heartbeat-bg::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: hsl(var(--heart-primary) / 0.3);
+    transform: translateY(-50%);
+  }
+  
+  .heartbeat-bg::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 200%;
+    height: 80px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100'%3E%3Cpath stroke='%23dc2626' stroke-width='2.5' fill='none' d='M0,50 L50,50 L55,48 L60,45 L65,50 L70,55 L75,45 L80,20 L85,80 L90,30 L95,70 L100,50 L150,50 L155,48 L160,45 L165,50 L170,55 L175,45 L180,20 L185,80 L190,30 L195,70 L200,50 L250,50 L255,48 L260,45 L265,50 L270,55 L275,45 L280,20 L285,80 L290,30 L295,70 L300,50 L350,50 L355,48 L360,45 L365,50 L370,55 L375,45 L380,20 L385,80 L390,30 L395,70 L400,50'/%3E%3C/svg%3E") repeat-x;
+    animation: heartbeat-line 4s linear infinite;
+    opacity: 0.4;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .heartbeat-bg::after {
+      height: 60px;
+      background-size: 300px 60px;
+    }
+  }
+  
+  .heartbeat-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Cpath stroke='%23ef4444' stroke-width='1.5' fill='none' opacity='0.15' d='M0,50 L20,50 L22,48 L24,45 L26,50 L28,55 L30,45 L32,20 L34,80 L36,30 L38,70 L40,50 L60,50 L62,48 L64,45 L66,50 L68,55 L70,45 L72,20 L74,80 L76,30 L78,70 L80,50 L100,50 L102,48 L104,45 L106,50 L108,55 L110,45 L112,20 L114,80 L116,30 L118,70 L120,50 L140,50 L142,48 L144,45 L146,50 L148,55 L150,45 L152,20 L154,80 L156,30 L158,70 L160,50 L180,50 L182,48 L184,45 L186,50 L188,55 L190,45 L192,20 L194,80 L196,30 L198,70 L200,50'/%3E%3C/svg%3E") repeat;
+    animation: heartbeat-grid 6s linear infinite;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  
+  @media (max-width: 768px) {
+    .heartbeat-overlay {
+      background-size: 150px 60px;
+      opacity: 0.4;
+    }
+  }
+  
+  .heartbeat-animation {
+    animation: heartbeat-pulse 1.5s ease-in-out infinite;
+  }
+  
+  .whatsapp-button {
+    background: hsl(var(--whatsapp));
+    color: white;
+    box-shadow: var(--shadow-button);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .whatsapp-button:hover {
+    background: hsl(var(--whatsapp-hover));
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px -12px hsl(var(--whatsapp) / 0.5);
+  }
+}
+
+@keyframes heartbeat-line {
+  0% { transform: translateX(-50%) translateY(-50%); }
+  100% { transform: translateX(0%) translateY(-50%); }
+}
+
+@keyframes heartbeat-grid {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes heartbeat-pulse {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.05); }
+  50% { transform: scale(1.1); }
+  75% { transform: scale(1.05); }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
