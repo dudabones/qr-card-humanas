@@ -56,19 +56,30 @@ const Index = () => {
           <CardContent className="p-6 sm:p-8 md:p-12 text-center">
             <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl leading-relaxed text-foreground">
               <p>
-                O <strong className="text-heart-primary">eletrocardiograma</strong> é um exame{" "}
-                <span className="text-heart-secondary font-semibold">rápido e indolor</span> que mostra como está a saúde do seu coração.
+                O coração é onde guardamos os nossos maiores amores.
+                É ele que bate mais forte quando abraçamos quem amamos, quando sorrimos junto da família, quando realizamos sonhos.
               </p>
               
               <p>
-                Ele ajuda a identificar <strong className="text-heart-primary">arritmias</strong>, alterações na pressão, 
-                riscos de infarto e muito mais.
+                Mas… você sabe como está o seu coração hoje?
+              </p>
+              
+              <p>
+                Um simples <strong className="text-heart-primary">eletrocardiograma</strong> — <span className="text-heart-secondary font-semibold">rápido, indolor e seguro</span> — pode revelar muito sobre a sua saúde e até prevenir surpresas que mudam vidas.
+              </p>
+              
+              <p>
+                Cuidar do coração é cuidar da sua história, dos seus momentos, das pessoas que você não quer deixar para trás.
+              </p>
+              
+              <p>
+                Não espere um susto para valorizar o que mais importa.
+                Faça o exame <strong className="text-heart-primary">GRATUITO</strong>. <span className="text-heart-secondary font-semibold">Cuide do seu coração. Cuide do coração de quem você ama.</span>
               </p>
               
               <div className="py-4 sm:py-6">
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-lg sm:text-xl md:text-2xl font-bold text-heart-primary">
                   <Heart className="w-6 h-6 sm:w-8 sm:h-8 animate-heartbeat-pulse" fill="currentColor" />
-                  <span className="text-center">Fazer esse exame pode salvar vidas — inclusive a sua!</span>
                   <Heart className="w-6 h-6 sm:w-8 sm:h-8 animate-heartbeat-pulse" fill="currentColor" />
                 </div>
               </div>
