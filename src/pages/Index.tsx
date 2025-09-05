@@ -36,19 +36,6 @@ const Index = () => {
             </span>
           </h1>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-6 sm:mb-8 px-4">
-            <div className="flex items-center gap-2">
-              <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-heart-primary animate-pulse" />
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-foreground text-center">
-                Quer garantir seu Eletrocardiograma gratuito?
-              </h2>
-              <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-heart-primary animate-pulse" />
-            </div>
-          </div>
-          
-          <p className="text-lg sm:text-xl text-muted-foreground font-medium">
-            É simples:
-          </p>
         </div>
 
         {/* Card principal com informações */}
