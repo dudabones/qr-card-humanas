@@ -77,12 +77,6 @@ const Index = () => {
                 Faça o exame <strong className="text-heart-primary">GRATUITO</strong>. <span className="text-heart-secondary font-semibold">Cuide do seu coração. Cuide do coração de quem você ama.</span>
               </p>
               
-              <div className="py-4 sm:py-6">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-lg sm:text-xl md:text-2xl font-bold text-heart-primary">
-                  <Heart className="w-6 h-6 sm:w-8 sm:h-8 animate-heartbeat-pulse" fill="currentColor" />
-                  <Heart className="w-6 h-6 sm:w-8 sm:h-8 animate-heartbeat-pulse" fill="currentColor" />
-                </div>
-              </div>
             </div>
           </CardContent>
         </Card>
