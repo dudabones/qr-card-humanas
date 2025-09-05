@@ -7,21 +7,11 @@ const Index = () => {
   const handleWhatsAppClick = () => {
     const whatsappUrl = "https://wa.me/558738617516?text=ENCONTREI%20O%20CORA%C3%87%C3%83O.%20Como%20fa%C3%A7o%20para%20garantir%20meu%20exame%3F%20";
     
-    // Detecção de plataforma móvel para melhor compatibilidade
-    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isAndroid = /Android/.test(navigator.userAgent);
-    
-    if (isMobile) {
-      // Para dispositivos móveis, usa window.location.href para melhor compatibilidade
+    // Tenta abrir em nova aba primeiro, se não funcionar usa redirect direto
+    try {
+      window.open(whatsappUrl, '_blank');
+    } catch (error) {
       window.location.href = whatsappUrl;
-    } else {
-      // Para desktop, tenta abrir em nova aba
-      try {
-        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-      } catch (error) {
-        window.location.href = whatsappUrl;
-      }
     }
   };
 
