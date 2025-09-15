@@ -5,7 +5,7 @@ import HeartIcon from "@/components/HeartIcon";
 
 const Index = () => {
   const handleWhatsAppClick = () => {
-    const whatsappUrl = "https://wa.me/5587996416504?text=ACHEI%20UM%20CORA%C3%87%C3%83O!";
+    const whatsappUrl = "https://wa.me/5587999195863?text=ACHEI%20O%20CORA%C3%87%C3%83O";
     
     // Tenta abrir em nova aba primeiro, se não funcionar usa redirect direto
     try {
