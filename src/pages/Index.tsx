@@ -5,7 +5,7 @@ import HeartIcon from "@/components/HeartIcon";
 
 const Index = () => {
   const handleWhatsAppClick = () => {
-    const whatsappUrl = "https://wa.me/5587996416504?text=%F0%9F%94%91%20Passos%20para%20garantir%20o%20exame%0A%0A1%EF%B8%8F%E2%83%A3%20Siga%20nossa%20p%C3%A1gina%20no%20Instagram%3A%20%40humanashomecare%0A2%EF%B8%8F%E2%83%A3%20Tire%20uma%20foto%20com%20o%20cora%C3%A7%C3%A3o%20que%20encontrou%20%F0%9F%93%B8%0A3%EF%B8%8F%E2%83%A3%20Poste%20nos%20stories%20marcando%20%40humanashomecare%0A%0AAssim%20que%20postar%2C%20enviamos%20seu%20voucher%20digital%20com%3A%0A%E2%9C%94%20Eletrocardiograma%20gratuito";
+    const whatsappUrl = "https://wa.me/5587996416504?text=ACHEI%20UM%20CORA%C3%87%C3%83O!";
     
     // Tenta abrir em nova aba primeiro, se não funcionar usa redirect direto
     try {
