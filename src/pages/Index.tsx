@@ -4,16 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import HeartIcon from "@/components/HeartIcon";
 
 const Index = () => {
-  const handleWhatsAppClick = () => {
-    const whatsappUrl = "https://wa.me/5587999195863?text=ACHEI%20O%20CORA%C3%87%C3%83O!";
-    
-    // Tenta abrir em nova aba primeiro, se não funcionar usa redirect direto
-    try {
-      window.open(whatsappUrl, '_blank');
-    } catch (error) {
-      window.location.href = whatsappUrl;
-    }
-  };
 
   return (
     <div className="min-h-screen heartbeat-bg">
@@ -71,7 +61,6 @@ const Index = () => {
         {/* Call to Action */}
         <div className="text-center animate-fade-in-up px-3 sm:px-6">
           <Button
-            onClick={handleWhatsAppClick}
             className="whatsapp-button text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl px-3 sm:px-6 md:px-8 lg:px-12 py-3 sm:py-4 md:py-5 lg:py-6 rounded-full hover:scale-105 transition-all duration-300 shadow-lg w-full max-w-[calc(100vw-24px)] sm:max-w-md md:max-w-lg lg:max-w-none lg:w-auto mx-auto"
             size="lg"
           >
@@ -80,7 +69,7 @@ const Index = () => {
           </Button>
           
           <p className="mt-4 sm:mt-6 text-muted-foreground text-xs sm:text-sm px-2">
-            Clique no botão acima e entre em contato conosco pelo WhatsApp
+            Botão para informações sobre ECG gratuito
           </p>
         </div>
 
